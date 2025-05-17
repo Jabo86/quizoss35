@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulazione Concorso Operatore Socio Sanitario - Modulo 23</title>
+    <title>Simulazione Concorso Operatore Socio Sanitario </title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -233,7 +233,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Simulazione Concorso Operatore Socio Sanitario - Modulo 23</h1>
+        <h1>Simulazione Concorso Operatore Socio Sanitario </h1>
         <div class="question-nav" id="questionNav"></div>
         <div id="timer">Tempo rimanente: <span id="time">30:00</span></div>
         <div id="quiz"></div>
@@ -248,78 +248,7 @@
     <script>
         // Array di domande (661-690) con opzioni mescolate casualmente
         const questions = [
-            {
-                question: "Cos’è l’anemia?",
-                options: ["Un’infiammazione della vescica", "Una riduzione dei globuli rossi o dell’emoglobina", "Un accumulo di liquido nei polmoni"],
-                correct: "Una riduzione dei globuli rossi o dell’emoglobina",
-                explanation: "L’anemia è una riduzione dei globuli rossi o dell’emoglobina, che causa ridotta ossigenazione, con sintomi come stanchezza e pallore. Non è un’infiammazione della vescica né un edema polmonare. Gli OSS devono monitorare il colorito, garantire una dieta ricca di ferro e segnalare sintomi."
-            },
-            {
-                question: "Quale è un segno tipico dell’anemia?",
-                options: ["Pallore cutaneo", "Poliuria", "Ittero"],
-                correct: "Pallore cutaneo",
-                explanation: "Il pallore cutaneo, specialmente delle mucose, è un segno tipico dell’anemia, spesso con stanchezza. La poliuria e l’ittero non sono correlati. Gli OSS devono osservare la pelle, monitorare la stanchezza e segnalare dispnea."
-            },
-            {
-                question: "Cos’è l’anemia falciforme?",
-                options: ["Un’infiammazione del fegato", "Una malattia genetica dei globuli rossi", "Un blocco renale"],
-                correct: "Una malattia genetica dei globuli rossi",
-                explanation: "L’anemia falciforme è una malattia genetica che causa globuli rossi a forma di falce, con sintomi come dolore e crisi vaso-occlusive. Non è un’infiammazione del fegato né un blocco renale. Gli OSS devono monitorare il dolore, garantire idratazione e segnalare sintomi."
-            },
-            {
-                question: "Quale è un segno tipico dell’anemia falciforme?",
-                options: ["Crisi dolorose", "Oliguria", "Ittero"],
-                correct: "Crisi dolorose",
-                explanation: "Le crisi dolorose, dovute a occlusioni vascolari, sono un segno tipico dell’anemia falciforme. L’oliguria e l’ittero possono essere secondari. Gli OSS devono monitorare il dolore, somministrare analgesici se prescritti e segnalare febbre."
-            },
-            {
-                question: "Cos’è la leucemia?",
-                options: ["Un’infiammazione della vescica", "Un tumore dei globuli bianchi", "Un accumulo di liquido nei polmoni"],
-                correct: "Un tumore dei globuli bianchi",
-                explanation: "La leucemia è un tumore dei globuli bianchi, che causa proliferazione anomala, con sintomi come stanchezza e infezioni frequenti. Non è un’infiammazione della vescica né un edema polmonare. Gli OSS devono monitorare la febbre, garantire l’igiene e segnalare sintomi."
-            },
-            {
-                question: "Quale è un segno tipico della leucemia?",
-                options: ["Infezioni ricorrenti", "Poliuria", "Ittero"],
-                correct: "Infezioni ricorrenti",
-                explanation: "Le infezioni ricorrenti, dovute a immunodeficienza, sono un segno tipico della leucemia. La poliuria e l’ittero non sono primari. Gli OSS devono garantire un ambiente sterile, monitorare la temperatura e segnalare sanguinamenti."
-            },
-            {
-                question: "Cos’è il linfoma?",
-                options: ["Un’infiammazione del fegato", "Un tumore del sistema linfatico", "Un blocco renale"],
-                correct: "Un tumore del sistema linfatico",
-                explanation: "Il linfoma è un tumore del sistema linfatico, come il linfoma di Hodgkin, con sintomi come linfoadenopatia e febbre. Non è un’infiammazione del fegato né un blocco renale. Gli OSS devono monitorare i linfonodi, garantire il comfort e segnalare sintomi."
-            },
-            {
-                question: "Quale è un segno tipico del linfoma?",
-                options: ["Linfoadenopatia", "Oliguria", "Ittero"],
-                correct: "Linfoadenopatia",
-                explanation: "La linfoadenopatia, con linfonodi ingrossati, è un segno tipico del linfoma. L’oliguria e l’ittero non sono correlati. Gli OSS devono palpare i linfonodi, monitorare la febbre e segnalare sudorazione notturna."
-            },
-            {
-                question: "Cos’è la talassemia?",
-                options: ["Un’infiammazione della vescica", "Una malattia genetica dell’emoglobina", "Un accumulo di liquido nei polmoni"],
-                correct: "Una malattia genetica dell’emoglobina",
-                explanation: "La talassemia è una malattia genetica che causa difetti nella sintesi dell’emoglobina, con sintomi come anemia e stanchezza. Non è un’infiammazione della vescica né un edema polmonare. Gli OSS devono monitorare il colorito, garantire trasfusioni e segnalare sintomi."
-            },
-            {
-                question: "Quale è un segno tipico della talassemia?",
-                options: ["Anemia cronica", "Poliuria", "Ittero"],
-                correct: "Anemia cronica",
-                explanation: "L’anemia cronica, con pallore e stanchezza, è un segno tipico della talassemia. La poliuria e l’ittero possono essere secondari. Gli OSS devono monitorare l’emoglobina, garantire una dieta adeguata e segnalare splenomegalia."
-            },
-            {
-                question: "Cos’è la trombocitopenia?",
-                options: ["Un’infiammazione del fegato", "Una riduzione delle piastrine", "Un blocco renale"],
-                correct: "Una riduzione delle piastrine",
-                explanation: "La trombocitopenia è una riduzione delle piastrine, che causa rischio di sanguinamento, con sintomi come petecchie e epistassi. Non è un’infiammazione del fegato né un blocco renale. Gli OSS devono monitorare i sanguinamenti, evitare traumi e segnalare sintomi."
-            },
-            {
-                question: "Quale è un segno tipico della trombocitopenia?",
-                options: ["Petecchie cutanee", "Oliguria", "Ittero"],
-                correct: "Petecchie cutanee",
-                explanation: "Le petecchie cutanee, piccole macchie emorragiche, sono un segno tipico della trombocitopenia. L’oliguria e l’ittero non sono correlati. Gli OSS devono osservare la pelle, evitare procedure invasive e segnalare epistassi."
-            },
+            
             {
                 question: "Cos’è l’emofilia?",
                 options: ["Un’infiammazione della vescica", "Una malattia genetica della coagulazione", "Un accumulo di liquido nei polmoni"],
